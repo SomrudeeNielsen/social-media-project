@@ -1,13 +1,214 @@
-body {
+/*https://coolors.co/03045e-023e8a-0077b6-0096c7-00b4d8-48cae4-
+90e0ef-ade8f4-caf0f8*/
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: black;
+  background-color: #90e0ef !important;
+   
+}
+.container{
+  margin: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  border: 3px solid #03045e ;
+ 
+} 
+
+container .p-5 {
+  background-color: #03045e !important;
+}
+
+.image {
+  position: relative;
+  max-width: 700px;
+  width: 100%;
+  margin-top: 40px;
+  
+}
+
+form {
+  width: 500px;
+  border: 2px solid #caf0f8;
+  padding: 16px;
+  font-size: x-large;
+  background-color: #ade8f4;
+  
+  
+}
+
+form .btn {
+  background-color: royalblue;
+  color: white;
+  margin-right: 1rem;
+}
+
+.new-account {
+  font-size: 1rem;
+}
+
+ul li {
+  display: flex;
+ 
+  
+}
+.links button {
+  background-color: #023e8a;
+  color: white;
+  font-size: 18px;
+  padding: 10px 24px;
+  border-color: transparent;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  margin-right: 1rem;
+  margin-top: 2rem;
+
+}
+
+button:hover {
+  background-color: #caf0f8;
+  color: black;
+}
+
+.text {
+  font-size: 16px;
+  margin-top: 2.2rem;
+  padding: 5px;
+}
+ 
+/*stock photo*/
+
+.search {
+  padding: 5rem 0 0 0;
+  width: 90vw;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  position: absolute;
+}
+
+.pink {
+  max-width: 240px;
+  width: 100%;
+  margin-top: 5rem;
+  margin-left: 5rem;
+  position: relative;
+
+}
+.name{
+  font-size: 1.5rem;
+  color: purple;
+  font-weight: 600;
+  margin: 1rem 6rem;
+  position: relative;
+  padding: 3px;
+  text-align: center;
+  border: 2px solid white;
+  border-radius: 6px;
+  max-width: 220px;
+}
+.search-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form-input {
+  width: 100%;
+}
+.form-input,
+.submit-btn {
+  padding: 0.75rem 1.25rem;
+  border: none;
+  text-transform: capitalize;
+  letter-spacing: var(--spacing);
+  font-size: 1.5rem;
+  background: transparent;
+  color: var(--clr-grey-5);
+  border-bottom: 3px solid var(--clr-grey-5);
+  cursor: pointer;
+}
+.form-input {
+  color: var(--clr-grey-3);
+}
+.form-input::placeholder {
+  color: var(--clr-grey-5);
+}
+.photos {
+  padding: 5rem 0;
+}
+.photos-center {
+  width: 90vw;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: grid;
+  gap: 2rem;
+}
+.photo {
+  height: 17.5rem;
+  position: relative;
+  overflow: hidden;
+}
+.photo > img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+.photo h4 {
+  margin-bottom: 0.5rem;
+}
+.photo p {
+  margin-bottom: 0;
+}
+.user-img {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+}
+.photo-info {
+  position: absolute;
+  width: 100%;
+  padding: 1rem;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+  transform: translateY(100%);
+  transition: var(--transition);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.photo:hover .photo-info {
+  transform: translateY(0);
+}
+@media screen and (min-width: 576px) {
+  .photos-center {
+    grid-template-columns: repeat(auto-fill, minmax(368px, 1fr));
+  }
+  .search-form {
+    max-width: var(--fixed-width);
+  }
+}
+
+.loading {
+  text-align: center;
+  padding: 3rem;
 }
